@@ -1,5 +1,9 @@
 pipeline{
     agent any
+enviroment{
+NAME = 'Anurag'
+        }
+
 stages
 {
 stage('GIT_stage') {
@@ -22,9 +26,6 @@ stage('While_loop_py_stage')
     {
     echo "third_stage"
     sh label: '', script: 'python while_loop.py'
-enviroment{
-NAME = 'Anurag'
-        }
     }
 }
 stage('Retry_and_timeout_stage')
