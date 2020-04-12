@@ -14,7 +14,7 @@ stage('Hello_world_py_stage')
     steps{
     echo "second_stage"
     sh label: '', script: 'python hello_world.py'
-        
+    retry(3){"hello"}    
     }
 }
 stage('While_loop_py_stage')
