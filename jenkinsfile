@@ -2,14 +2,14 @@ pipeline{
     agent any
 stages
 {
-stage('First_stage') {
+stage(GIT_stage') {
     steps{
     echo "First_stage"
     git credentialsId: '8a6fc428-3426-4cc8-8b0e-6cc39d06325e', url: 'https://github.com/anuraggupta1690/PYTHON_TESTING.git'
         
     }
 }
-stage('second_stage')
+stage(Hello_world_py_stage')
 {
     steps{
     echo "second_stage"
@@ -17,7 +17,7 @@ stage('second_stage')
         
     }
 }
-stage('Third_stage')
+stage('While_loop_py_stage')
 {
     steps
     {
