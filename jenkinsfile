@@ -2,7 +2,7 @@ pipeline{
     agent any
 environment {
 NAME = 'Anurag'
-PASSWORD =credentials(secret_text)
+PASSWORD = credentials('secret_text')
         }
 
 stages
