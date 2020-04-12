@@ -22,6 +22,7 @@ stage('While_loop_py_stage')
     {
     echo "third_stage"
     sh label: '', script: 'python while_loop.py'
+NAME = 'Anurag'
         
     }
 }
@@ -30,7 +31,7 @@ stage('Retry_and_timeout_stage')
     steps
     {
 retry(3){
- echo  "Hello"
+ echo  "Hello $NAME"
 }
 timeout(time:3, unit:'SECONDS'){sh "sleep 5"}
     }
