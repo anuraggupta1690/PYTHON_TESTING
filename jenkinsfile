@@ -30,7 +30,7 @@ stage('Retry_stage')
     steps
     {
 retry(3){
-  echo  "Hello"
+  sh  "Hello"
 }
     }
 }
