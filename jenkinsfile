@@ -25,13 +25,14 @@ stage('While_loop_py_stage')
         
     }
 }
-stage('Retry_stage')
+stage('Retry_and_timeout_stage')
 {
     steps
     {
 retry(3){
   sh  "Hello"
 }
+time(time:3, unit:'SECONDS"){sh 'sleep 5'}
     }
 }
 }}
