@@ -2,6 +2,7 @@ pipeline{
     agent any
 environment {
 NAME = 'Anurag'
+PASSWORD = Credentials(secret_text)
         }
 
 stages
@@ -33,7 +34,7 @@ stage('Retry_and_timeout_stage')
     steps
     {
 retry(3){
- echo  "Hello $NAME"
+ echo  "Hello $NAME, your password is $PASSWORD"
 }
 timeout(time:3, unit:'SECONDS'){sh "sleep 5"}
     }
