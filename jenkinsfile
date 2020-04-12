@@ -25,7 +25,7 @@ stage('While_loop_py_stage')
         
     }
 }
-stage(Retry_stage')
+stage('Retry_stage')
 {
     steps
     {
