@@ -30,7 +30,7 @@ stage('Retry_and_timeout_stage')
     steps
     {
 retry(3){
-  sh  "Hello"
+  sh echo  "Hello"
 }
 timeout(time:3, unit:'SECONDS'){sh "sleep 5"}
     }
