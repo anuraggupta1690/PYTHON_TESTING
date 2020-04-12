@@ -25,4 +25,13 @@ stage('While_loop_py_stage')
         
     }
 }
+stage(Retry_stage')
+{
+    steps
+    {
+retry(3){
+    "Hello"
+}
+    }
+}
 }}
